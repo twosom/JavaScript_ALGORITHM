@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(s) {
+        // 대문자와 소문자가 같이 존재하는 문자열을 입력받아 소문자로 모두 통일하여 문자열을 출력 하는 프로그램을 작성하세요.
+        // ASCII 이용하여.
+
+        let answer = '';
+        for (let ch of s) {
+            let ascii = ch.charCodeAt();
+            answer += ascii >= 60 && ascii <= 90 ? String.fromCharCode(ascii + 32) : ch;
+        }
+
+        return answer;
+
+    }
+
+    let str = "ItisTimeToStudy";
+    console.log(solution(str));
+</script>
+</body>
+</html>
